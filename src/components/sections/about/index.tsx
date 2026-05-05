@@ -1,6 +1,6 @@
 import { Col, Row } from "react-bootstrap";
 import AnimationLottie from "@/components/share/animation-lottie";
-import codingJSON from 'assets/lottie/coding.json';
+import codingJSON from "assets/lottie/coding.json";
 import { DEVELOPMENT_LOTTIE } from "assets/lottie/string/development";
 import { CONTACT_LOTTIE } from "assets/lottie/string/contact";
 import GlowCard from "components/share/glow-card";
@@ -12,102 +12,129 @@ import SocialMedia from "components/sections/social.media";
 const About = () => {
     return (
         <>
+            {/* =======================
+                INTRO SECTION
+            ======================= */}
             <Row>
                 <Col md={6} xs={12}>
-                    <h3 className="text-center mb-md-5 mb-2">Know Who <span className="brand-red">I'M</span> </h3>
+                    <h3 className="text-center mb-md-5 mb-3">
+                        About <span className="brand-red">Me</span>
+                    </h3>
+
                     <div>
-                        <div>
-                            <p> Hi Everyone, I am HoiDanIT from Hanoi, VietNam.</p>
-
-                            <p> I am currently employed as a a freelance dev (start-up).</p>
-
-                            <p> I have completed Bachelor's degree in Software Engineer at Hanoi University of Science and Technology (HUST).</p>
-                        </div>
-                    </div>
-                    <div>
-                        <p>Apart from coding, some other activities that I love to do!
-
+                        <p>
+                            Hi, I’m Minh Truc from Ho Chi Minh City, Vietnam.
                         </p>
+
+                        <p>
+                            I am an Information Technology student focused on
+                            backend development and building scalable web systems.
+                        </p>
+
+                        <p>
+                            I enjoy working with APIs, system design, and backend
+                            architectures using Java and JavaScript technologies.
+                        </p>
+                    </div>
+
+                    <div className="mt-4">
+                        <p>Outside of coding, I enjoy:</p>
                         <ul>
-                            <li>Playing Games</li>
-                            <li>Writing Tech Blogs</li>
-                            <li>Travelling</li>
+                            <li>Exploring new technologies</li>
+                            <li>Building personal projects</li>
+                            <li>Learning system design concepts</li>
                         </ul>
                     </div>
-                    <div>
-                        <p className="text-center brand-red">"Pursuing Your Dreams Is How You Become Homeless ~.~"</p>
-                        <p className="text-center brand-red">--Jimmy O Yang</p>
-                    </div>
-                </Col >
-                <Col md={6} xs={12} className="d-flex align-items-center justify-content-center">
-                    <AnimationLottie
-                        width="80%"
-                        animationPath={codingJSON} />
+                </Col>
+
+                <Col
+                    md={6}
+                    xs={12}
+                    className="d-flex align-items-center justify-content-center"
+                >
+                    <AnimationLottie width="80%" animationPath={codingJSON} />
                 </Col>
             </Row>
 
+            {/* =======================
+                EDUCATION SECTION
+            ======================= */}
             <Row>
-                <Col md={6} xs={12}
+                <Col
+                    md={6}
+                    xs={12}
                     className="d-none d-md-flex align-items-center justify-content-center mt-md-5 mt-3"
                 >
                     <AnimationLottie
-                        width="50%"
-                        //animation with rp => convert sang text
-                        // https://github.com/airbnb/lottie-web/issues/2070
+                        width="60%"
                         animationPath={JSON.parse(DEVELOPMENT_LOTTIE)}
                     />
                 </Col>
+
                 <Col md={6} xs={12} className="mt-md-5 mt-3">
                     <div className="d-flex flex-column align-items-center gap-3">
-                        <div><h4 className="text-center brand-red">Education</h4></div>
-                        <div >
-                            <GlowCard identifier={`experience-5`}>
-                                <div className="p-3 relative">
-                                    <div className="experience-container">
-                                        <div className="duration-text">
-                                            <p>20xx-20xx</p>
+                        <h4 className="text-center brand-red">Education</h4>
+
+                        <GlowCard identifier="education-1">
+                            <div className="p-3">
+                                <div className="experience-container">
+                                    <div className="details">
+                                        <div className="icon">
+                                            <FaGraduationCap size={36} />
                                         </div>
-                                        <div className="details">
-                                            <div className="icon">
-                                                <FaGraduationCap size={36} />
-                                            </div>
-                                            <div className="info">
-                                                <p className="title">Softwaren Engineer</p>
-                                                <p className="company">Hanoi University of Science and Technology (HUST)</p>
-                                            </div>
+
+                                        <div className="info">
+                                            <p className="title">
+                                                Software Engineering
+                                            </p>
+                                            <p className="company">
+                                                Saigon University
+                                            </p>
+                                            <p className="duration">
+                                                2022 - Present
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                            </GlowCard>
-                        </div>
+                            </div>
+                        </GlowCard>
                     </div>
                 </Col>
             </Row>
 
             <Divider />
+
+            {/* =======================
+                CONTACT SECTION
+            ======================= */}
             <Row>
-                <Col md={6} xs={12} className=" mt-md-5 mt-3">
-                    <h3 className="mb-md-5 mb-2">FIND ME ON </h3>
+                <Col md={6} xs={12} className="mt-md-5 mt-3">
+                    <h3 className="mb-md-4 mb-2">Find Me On</h3>
+
                     <SocialMedia
                         youtube={APP_DATA.YOUTUBE_URL}
                         facebook={APP_DATA.FACEBOOK_URL}
                         tiktok={APP_DATA.TIKTOK_URL}
                         udemy={APP_DATA.UDEMY_URL}
                     />
-                </Col >
-                <Col md={6} xs={12} className="d-flex flex-column align-items-center justify-content-center">
+                </Col>
+
+                <Col
+                    md={6}
+                    xs={12}
+                    className="d-flex flex-column align-items-center justify-content-center"
+                >
                     <AnimationLottie
                         width="50%"
-                        //animation with rp => convert sang text
-                        // https://github.com/airbnb/lottie-web/issues/2070
                         animationPath={JSON.parse(CONTACT_LOTTIE)}
                     />
-                    <h4 className="text-center">Contact me</h4>
+                    <h4 className="text-center mt-3">Let’s Connect</h4>
                 </Col>
             </Row>
-            <div className="mb-5"></div>
+
+            <div className="mb-5" />
         </>
-    )
-}
+    );
+};
 
 export default About;

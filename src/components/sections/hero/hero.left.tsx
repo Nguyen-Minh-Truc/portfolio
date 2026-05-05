@@ -19,7 +19,7 @@ const HeroLeft = (props: IProps) => {
         if (newWindow) newWindow.opener = null
     }
     const handleDownloadCV = () => {
-        openInNewTab("https://drive.google.com/file/d/1nhaXoxozVgdN2kQc6zI8-9ftkueqkuqb/view?usp=drive_link")
+        openInNewTab("https://drive.google.com/file/d/1vLoJ2zX7inHr9eXWn_cq9LqcuaeXYWkC/view?usp=drive_link")
     }
     return (
         <div className='hero-left'>

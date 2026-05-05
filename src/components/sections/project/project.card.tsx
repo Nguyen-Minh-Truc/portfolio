@@ -1,6 +1,5 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 
 interface IProps {
@@ -28,17 +27,6 @@ function ProjectCard(props: IProps) {
                             <BsGithub /> &nbsp;
                             GitHub
                         </Button>
-
-                        <Button
-                            variant="primary"
-                            href={props.demoLink}
-                            target="_blank"
-                            style={{ marginLeft: "10px" }}
-                        >
-                            <CgWebsite /> &nbsp;
-                            {"Demo"}
-                        </Button>
-
                     </div>
                 </div>
             </Card.Body>
